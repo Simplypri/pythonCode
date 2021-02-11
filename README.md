@@ -1,2 +1,2 @@
 # pythonCode
-My first code under this repository
+Always go to the basics!

@@ -9,4 +9,4 @@ print(n)
 
 rand_names = random.randint(0, n-1)
 person_who_pays_bill = names[rand_names]
-print(person_who_pays_bill)
+print(person_who_pays_bill + 'is going to buy the meal today!')

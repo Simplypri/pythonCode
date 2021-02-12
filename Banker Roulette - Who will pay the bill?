@@ -1,0 +1,12 @@
+# Enter Names:
+names_string = input("Give me everybody's names, separated by a comma. ")
+names = names_string.split(",")
+print(names)
+import random
+
+n = len(names)
+print(n)
+
+rand_names = random.randint(0, n-1)
+person_who_pays_bill = names[rand_names]
+print(person_who_pays_bill)

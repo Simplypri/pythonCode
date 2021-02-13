@@ -1,0 +1,65 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+
+game_images = [rock, paper, scissors]
+
+choice = int(input("Make you choice: 0- Rock/1-Paper/2-Scissor?\n"))
+print(game_images[choice])
+
+computer = random.randint(0,2)
+print('computer chose: ')
+print(game_images[computer])
+
+if( computer == 0):
+  print('computer chose rock')
+  
+  if(choice == 0):
+    print('Draw')
+  elif(choice == 1):
+    print('You won')
+  else:
+    print('Computer won')
+
+elif(computer == 1):
+  print('computer chose paper')
+  if(choice == 0):
+    print('Computer won')
+  elif(choice == 1):
+    print('Draw')
+  else:
+    print('You won')
+
+else:
+  print('computer chose scissors')
+  if(choice == 0):
+    print('You won')
+  elif(choice == 1):
+    print('Computer won')
+  else:
+    print('Draw')

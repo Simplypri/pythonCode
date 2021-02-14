@@ -1,0 +1,20 @@
+## Reeborg was exploring a dark maze and the battery in its flash light ran out. Writing a program to help Reeborg find exit. 
+# The secret is to make Reeborg follow along the right edge of the maze. 
+# Turning right if it can. Going straight if it cant turn rightor turning left as its last resort.
+# https://reeborg.ca/reeborg.html
+
+#defining function turn_right
+def turn_right():
+    turn_left
+    turn_left
+    turn_left
+
+while not at_goal():  # at_goal is at the winning point
+    if  right_is_clear():
+        turn_right()
+        move()
+    elif front_is_clear:
+        move()
+    else:
+        turn_left
+    

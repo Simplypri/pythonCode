@@ -1,0 +1,35 @@
+travel_log = [
+{
+  "country": "France",
+  "visits": 12,
+  "cities": ["Paris", "Lille", "Dijon"]
+},
+{
+  "country": "Germany",
+  "visits": 5,
+  "cities": ["Berlin", "Hamburg", "Stuttgart"]
+},
+]
+# Write the function that will allow new countries to be added to the travel_log using insert or append method
+
+## if inserting at the start:
+
+#def add_new_country(country, visits, cities):
+  travel_log.insert(0,{})
+  travel_log[0]['country'] = country
+  travel_log[0]['visits'] = visits
+  travel_log[0]['cities'] = cities
+  
+        OR
+        
+## if appending at the end:
+
+def add_new_country(country, visits, cities):
+  new_country = {}
+  new_country['country'] = country
+  new_country['visits'] = visits
+  new_country['cities'] = cities
+  travel_log.append(new_country)
+
+add_new_country("Russia", 2, ["Moscow", "Saint Petersburg"])
+print(travel_log)

@@ -1,0 +1,51 @@
+# Include an ASCII art logo.
+from art import logo
+import random
+import sys
+attempts=0
+
+def guess(guess_attempts, guess_actual_answer):
+  while guess_attempts > 0 :
+    # Allow the player to submit a guess for a number between 1 and 100.
+    guess_number = int(input('Guess the number between 1 and 100: \n'))
+    while guess_number not in range(100):
+        print('Input number not between 1 to 100')
+        guess_number = int(input('Input the number between 1 and 100: \n'))
+    else:
+        guess_attempts -= 1
+        # Check user's guess against actual answer.
+        # Print "Too high." or "Too low." depending on the user's answer.
+        # Track the number of turns remaining.
+        # If they run out of turns, provide feedback to the player.
+        if guess_number > guess_actual_answer:
+          print('Too high')
+          print(f'You have {guess_attempts} remaining')
+        elif guess_number < guess_actual_answer:
+          print('Too Low')
+          print(f'You have {guess_attempts} remaining')
+        else:
+          # If they got the answer correct, show the actual answer to the player
+          print(f'You are right! {guess_number} is the answer !!')
+          break
+  else:
+    print('You are out of attempts!!')
+
+def main():
+    print(logo)
+    actual_answer = random.choice(range(100))
+    # print(actual_answer)
+    level = input('Choose the level you want to play: Easy or Hard?: \n').lower()
+    # Include two different difficulty levels (10 guesses in easy mode, only 5 guesses in hard mode).
+    if level == 'easy':
+        attempts = 10
+    elif level == 'hard':
+        attempts = 5
+    else:
+        print('Please provide correct input')
+        quit()
+
+    guess(attempts,actual_answer)
+
+
+if __name__ == '__main__':
+    main()

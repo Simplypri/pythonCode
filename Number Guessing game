@@ -32,6 +32,8 @@ def guess(guess_attempts, guess_actual_answer):
 
 def main():
     print(logo)
+    print('Welcome to the number guessing game')
+    print('I am thinking of a number between 1 and 100')
     actual_answer = random.choice(range(100))
     # print(actual_answer)
     level = input('Choose the level you want to play: Easy or Hard?: \n').lower()
